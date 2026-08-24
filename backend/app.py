@@ -23,6 +23,12 @@ def register():
     password = data.get('password', '')
     confirm_password = data.get('confirm_password', '')
 
+    username = username.strip()
+    password = password.strip()
+
+    if not username:
+        return jsonify({"status": "fail", "message": "用户名不能为空"}), 400
+
     if not password:
         return jsonify({"status": "fail", "message": "密码不能为空"}), 400
 
@@ -51,6 +57,12 @@ def login():
     data = request.json
     username = data.get('username', '')
     password = data.get('password', '')
+    
+    username = username.strip()
+    password = password.strip()
+
+    if not username:
+        return jsonify({"status": "fail", "message": "用户名不能为空"}), 400
 
     conn = get_db_connection()
     existing_user = conn.execute(
