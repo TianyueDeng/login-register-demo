@@ -64,6 +64,9 @@ def login():
     if not username:
         return jsonify({"status": "fail", "message": "用户名不能为空"}), 400
 
+    if not password:
+        return jsonify({"status": "fail", "message": "密码不能为空"}), 400
+
     conn = get_db_connection()
     existing_user = conn.execute(
         "SELECT id FROM users WHERE username = ? AND password = ?", (username,password)

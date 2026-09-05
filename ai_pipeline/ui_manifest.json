@@ -1,0 +1,23 @@
+{
+  "pages": [
+    {
+      "route": "/register",
+      "page_name": "注册页",
+      "fields": [
+        {"field_name": "username", "selector_type": "placeholder", "selector_value": "用户名（至少6位）"},
+        {"field_name": "password", "selector_type": "placeholder", "selector_value": "密码"},
+        {"field_name": "confirm_password", "selector_type": "placeholder", "selector_value": "确认密码"}
+      ],
+      "submit_button_text": "注册"
+    },
+    {
+      "route": "/login",
+      "page_name": "登录页",
+      "fields": [
+        {"field_name": "username", "selector_type": "placeholder", "selector_value": "用户名"},
+        {"field_name": "password", "selector_type": "placeholder", "selector_value": "密码"}
+      ],
+      "submit_button_text": "登录"
+    }
+  ]
+}

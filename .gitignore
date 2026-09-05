@@ -4,3 +4,4 @@ __pycache__/
 *.rar
 node_modules/
 build/
+.env
